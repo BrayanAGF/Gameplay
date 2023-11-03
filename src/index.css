@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  overflow: hidden;
+}
+
+@keyframes animacion {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+    overflow: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    overflow: hidden;
+  }
+}
+
+/* Aplica la animación al elemento */
+.animacionReproductor {
+  animation-name: animacion;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animacionEIn {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+
+  }
+}
+
+/* Aplica la animación al elemento */
+.animacionReproductorExpandidoIn {
+  overflow: hidden;
+  position: absolute;
+  animation-name: animacionEIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animacionEOut {
+  0% {
+    transform: translateY(0%);
+    overflow: hidden;
+  }
+
+  100% {
+    transform: translateY(100%);
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+}
+
+/* Aplica la animación al elemento */
+.animacionReproductorExpandidoOut {
+  overflow: hidden;
+  position: absolute;
+  animation-name: animacionEOut;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+
+#VolverEscuchar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.Titulo {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.Subtitulo{
+  font-family: 'Gabarito', sans-serif;
+}
