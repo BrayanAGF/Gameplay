@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import GamePlay from './GamePlay'
+import { GamePlay } from './GamePlay'
 import './index.css'
 import { NextUIProvider } from "@nextui-org/react";
 import { BrowserRouter, HashRouter } from 'react-router-dom';

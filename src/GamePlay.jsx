@@ -1,5 +1,5 @@
 import { Router } from './Pages/Router'
-const GamePlay = () => {
+export const GamePlay = () => {
   return (
     <div className='Dark text-foreground bg-background'>
       <Router />
@@ -7,4 +7,3 @@ const GamePlay = () => {
   )
 }
 
-export default GamePlay
