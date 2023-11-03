@@ -1,3 +1,4 @@
+import { Image } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 
@@ -12,7 +13,7 @@ export const PlayerExpandidoComponent = () => {
 
 
     return (
-        <div className={`bg-background h-[85.5%] z-20 w-full absolute top-0 place-items-center ${Visible} ${ReproductorExpandido ? 'animacionReproductorExpandidoIn' : 'animacionReproductorExpandidoOut'}`}
+        <div className={`bg-background xs:h-[82%] md:h-[calc(100%_-_11px)] z-20 w-full absolute top-0 place-items-center ${Visible} ${ReproductorExpandido ? 'animacionReproductorExpandidoIn' : 'animacionReproductorExpandidoOut'}`}
             onAnimationStart={() => {
                 !ReproductorExpandido ? setTimeout(() => {
                     setVisible('hidden')
@@ -21,10 +22,12 @@ export const PlayerExpandidoComponent = () => {
                     setVisible('grid');
             }}
         >
-            <div className="xs:w-[90%] xs:h-[60%] text-center">
-                <img src={Reproduciendo.ImgURL} alt="cancion-imagen" className="w-full h-full rounded-lg" />
-                <h3>{Reproduciendo.Nombre}</h3>
-                <h4>{Reproduciendo.Artista}</h4>
+            <div>
+                <Image src={Reproduciendo.ImgURL} isBlurred className="w-[calc(100vw_-_50px)] h-[50vh]" />
+                <div className="flex flex-col items-center Subtitulo">
+                    <h3>{Reproduciendo.Nombre}</h3>
+                    <h4>{Reproduciendo.Artista}</h4>
+                </div>
             </div>
         </div>
     )
